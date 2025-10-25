@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/miketerry-org/sandy-dal/issues"
   },
-  "homepage": "https://github.com/miketerry-org/sandy-dal#readme"
+  "homepage": "https://github.com/miketerry-org/sandy-dal#readme",
+  "dependencies": {
+    "milwaukee-foundation": "^0.1.2"
+  }
 }
