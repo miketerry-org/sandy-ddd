@@ -15,5 +15,16 @@ import SqliteDAO from "./lib/daosqlite.js";
 import MySQLDAO from "./lib/daomysql.js";
 import PostgresDAO from "./lib/daopostgres.js";
 import MongoDBDAO from "./lib/daomongodb.js";
+import DomainModel from "./lib/domainModel.js";
+import DomainSchema from "./lib/domainSchema.js";
 
-export { DAO, SQLDAO, MongoDBDAO, SqliteDAO, MySQLDAO, PostgresDAO };
+export {
+  DAO,
+  SQLDAO,
+  MongoDBDAO,
+  SqliteDAO,
+  MySQLDAO,
+  PostgresDAO,
+  DomainModel,
+  DomainSchema,
+};
