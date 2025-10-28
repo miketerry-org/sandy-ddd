@@ -1,8 +1,8 @@
 {
   "type": "module",
-  "name": "sandy-dal",
-  "version": "0.0.1",
-  "description": "Data Access Layer for multiple databases",
+  "name": "sandy-ddd",
+  "version": "0.0.12,
+  "description": "Dommain driven design for multiple databases",
   "main": "index.js",
   "scripts": {
     "test": "ormond"
