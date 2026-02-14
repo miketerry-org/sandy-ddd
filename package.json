@@ -1,18 +1,19 @@
 {
   "type": "module",
-  "name": "sandy-ddd",
+  "name": "turbo-db",
   "version": "0.0.3",
-  "description": "Dommain driven design for multiple databases",
+  "description": "Classes to work with multiple relational and document databases",
   "main": "index.js",
   "scripts": {
-    "test": "ormond"
+    "dev": "NODE_ENV=DEVELOPMENT nodemon index.js --watch .",
+    "test": "NODE_ENV=testing node --experimental-vm-modules node_modules/jest/bin/jest.js --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/miketerry-org/sandy-dal.git"
+    "url": "git+https://github.com/miketerry-org/turbo-orm.git"
   },
   "keywords": [
-    "sandy",
+    "turbo",
     "data",
     "access",
     "layer",
@@ -24,10 +25,14 @@
   "author": "Mike Terry",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/miketerry-org/sandy-dal/issues"
+    "url": "https://github.com/miketerry-org/turbo-db/issues"
   },
-  "homepage": "https://github.com/miketerry-org/sandy-dal#readme",
+  "homepage": "https://github.com/miketerry-org/turbo-orm#readme",
+  "devDependencies": {
+    "jest": "^30.2.0"
+  },
   "dependencies": {
-    "milwaukee-foundation": "^0.1.2"
+    "ini": "^6.0.0",
+    "mongodb": "^7.1.0"
   }
 }

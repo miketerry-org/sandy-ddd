@@ -1,7 +1,5 @@
 // index.js:
 
-"use strict";
-
 /**
  * Central export for all DAO classes.
  * -------------------------------------------------------------
@@ -9,9 +7,9 @@
  *
  * import { DAO, MongoDBDAO, SqliteDAO } from "./index.js";
  */
-import DAO from "./lib/dao.js";
-import SQLDAO from "./lib/daoSQL.js";
-import SqliteDAO from "./lib/daosqlite.js";
+import BaseDriver from "./lib/drivers/baseDriver.js";
+import SQLDriver from "./lib/drivers/SQLDriver.js";
+import SqliteDriver from "./lib/drivers/driver-sqlite.js";
 import MySQLDAO from "./lib/daomysql.js";
 import PostgresDAO from "./lib/daopostgres.js";
 import MongoDBDAO from "./lib/daomongodb.js";
