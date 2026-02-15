@@ -5,7 +5,7 @@ import parseIniFile from "../lib/parseIniFile.js";
 
 function testDriverIni(db_driver) {
   // create full namename based ondatabase driver name
-  let filename = path.resolve(`./test/inifiles/${db_driver}.ini`);
+  let filename = path.resolve(`./test/_inifiles/${db_driver}.ini`);
 
   // load and parse the specified ini file
   let data = parseIniFile(filename);
