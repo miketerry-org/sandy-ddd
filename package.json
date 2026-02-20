@@ -4,9 +4,14 @@
   "description": "Classes to work with multiple relational and document databases",
   "type": "module",
   "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
   "scripts": {
     "dev": "NODE_ENV=development nodemon index.js --watch .",
-    "test": "NODE_ENV=testing node --experimental-vm-modules node_modules/jest/bin/jest.js --silent=false"
+    "test": "NODE_ENV=testing node --test \"test/**/*.test.js\"",
+    "test:watch": "NODE_ENV=testing node --test --watch \"test/**/*.test.js\"",
+    "test:coverage": "NODE_ENV=testing node --test --coverage \"test/**/*.test.js\""
   },
   "repository": {
     "type": "git",
@@ -29,7 +34,6 @@
   },
   "homepage": "https://github.com/miketerry-org/turbo-orm#readme",
   "devDependencies": {
-    "jest": "^30.2.0",
     "nodemon": "^3.0.1"
   },
   "dependencies": {
@@ -37,9 +41,7 @@
     "mongodb": "^7.1.0",
     "pg": "^8.18.0"
   },
-  "jest": {
-    "testEnvironment": "node",
-    "silent": false,
-    "verbose": true
+  "engines": {
+    "node": ">=20"
   }
 }

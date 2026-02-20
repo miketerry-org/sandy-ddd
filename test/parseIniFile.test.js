@@ -1,26 +1,27 @@
-//
+// test/parseIniFile.test.js
 
 import path from "path";
 import fs from "fs";
+import assert from "node:assert";
+import test from "node:test";
 import parseIniFile from "../lib/parseIniFile.js";
 
 const driverNames = ["mariadb", "mongodb", "mysql", "postgres", "sqlite"];
 
-describe("parse ini files", () => {
-  let exists;
-  let config;
+driverNames.forEach(driverName => {
+  const filename = path.resolve(`test/_inifiles/${driverName}.ini`);
 
-  driverNames.forEach(driverName => {
-    const filename = path.resolve(`test/_inifiles/${driverName}.ini`);
-    it(`should ensure the ${driverName} ini file exists`, () => {
-      exists = fs.existsSync(filename);
-      expect(exists).toEqual(true);
-    });
+  test(`INI file exists: ${driverName}`, () => {
+    const exists = fs.existsSync(filename);
+    assert.ok(exists, `INI file ${filename} should exist`);
+  });
 
-    it(`should parse the ${driverName} ini file`, () => {
-      config = parseIniFile(filename);
-      const type = typeof config;
-      expect(typeof config).toEqual("object");
-    });
+  test(`INI file parses correctly: ${driverName}`, () => {
+    const config = parseIniFile(filename);
+    assert.strictEqual(
+      typeof config,
+      "object",
+      "Parsed INI should be an object"
+    );
   });
 });
