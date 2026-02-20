@@ -20,7 +20,6 @@ describe("parse ini files", () => {
     it(`should parse the ${driverName} ini file`, () => {
       config = parseIniFile(filename);
       const type = typeof config;
-      console.log("type", type);
       expect(typeof config).toEqual("object");
     });
   });
